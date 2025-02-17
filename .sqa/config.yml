@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/Deltares/ra2ce:
-      branch: master
+      branch: v1.0.0
       repo: https://github.com/Deltares/ra2ce
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: main
@@ -15,62 +15,62 @@ sqa_criteria:
     repos:
       github.com/Deltares/ra2ce git:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-rose-foxhound.sh
-        container: qc.acc_pasty-crimson-vole
+        - /usr/bin/env sh .sqa/script.muggy-malachite-mist.sh
+        container: qc.acc_gloppy-pear-tiger
   QC.Doc:
     repos:
       github.com/Deltares/ra2ce find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-buff-impala.sh
-        container: qc.doc_pretty-jade-snail
+        - /usr/bin/env sh .sqa/script.cozy-smalt-goat.sh
+        container: qc.doc_slaphappy-orange-gerbil
       github.com/Deltares/ra2ce git:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-champagne-weasel.sh
-        container: qc.doc_scanty-bistre-ant
+        - /usr/bin/env sh .sqa/script.bluesy-white-collie.sh
+        container: qc.doc_baggy-cerise-cat
       github.com/Deltares/ra2ce markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-taupe-bison.sh
-        container: qc.doc_greasy-fuchsia-owl
+        - /usr/bin/env sh .sqa/script.fuzzy-mustard-angora.sh
+        container: qc.doc_smelly-gamboge-moth
       github.com/Deltares/ra2ce restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-magnolia-bracke.sh
-        container: qc.doc_whiny-grey-malamute
+        - /usr/bin/env sh .sqa/script.lumpy-magnolia-chipmunk.sh
+        container: qc.doc_stealthy-wisteria-quoll
   QC.Lic:
     repos:
       github.com/Deltares/ra2ce licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-cobalt-orangutan.sh
-        container: qc.lic_slimy-magnolia-blue
+        - /usr/bin/env sh .sqa/script.geeky-emerald-termite.sh
+        container: qc.lic_stuffy-indigo-dormouse
   QC.Sec:
     repos:
       github.com/Deltares/ra2ce bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-cobalt-serval.sh
-        container: qc.sec_flaky-linen-axolotl
+        - /usr/bin/env sh .sqa/script.cheeky-carmine-lizard.sh
+        container: qc.sec_snoopy-scarlet-newt
   QC.Sty:
     repos:
       github.com/Deltares/ra2ce flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-harlequin-burmese.sh
-        container: qc.sty_cranky-cinnamon-greyhound
+        - /usr/bin/env sh .sqa/script.paltry-tangerine-deer.sh
+        container: qc.sty_nerdy-fuchsia-anteater
       github.com/Deltares/ra2ce hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-khaki-coyote.sh
-        container: qc.sty_scummy-rose-capuchin
+        - /usr/bin/env sh .sqa/script.gummy-magnolia-fowl.sh
+        container: qc.sty_frumpy-flax-angelfish
       github.com/Deltares/ra2ce jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-celadon-terrier.sh
-        container: qc.sty_pretty-teal-bongo
+        - /usr/bin/env sh .sqa/script.wheezy-bistre-bird.sh
+        container: qc.sty_pokey-flax-crocodile
   QC.Uni:
     repos:
       github.com/Deltares/ra2ce pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-green-spoonbill.sh
-        container: qc.uni_homely-rose-mist
+        - /usr/bin/env sh .sqa/script.crabby-brown-bordeaux.sh
+        container: qc.uni_shabby-platinum-hedgehog
   QC.Ver:
     repos:
       github.com/Deltares/ra2ce get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-persimmon-horse.sh
-        container: qc.ver_shabby-apricot-dachshund
+        - /usr/bin/env sh .sqa/script.craggy-emerald-lynx.sh
+        container: qc.ver_scummy-silver-chimpanzee
 timeout: 5400
