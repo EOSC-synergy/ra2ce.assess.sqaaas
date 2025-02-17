@@ -1,0 +1,76 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/Deltares/ra2ce:
+      branch: master
+      repo: https://github.com/Deltares/ra2ce
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/Deltares/ra2ce git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-rose-foxhound.sh
+        container: qc.acc_pasty-crimson-vole
+  QC.Doc:
+    repos:
+      github.com/Deltares/ra2ce find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-buff-impala.sh
+        container: qc.doc_pretty-jade-snail
+      github.com/Deltares/ra2ce git:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-champagne-weasel.sh
+        container: qc.doc_scanty-bistre-ant
+      github.com/Deltares/ra2ce markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-taupe-bison.sh
+        container: qc.doc_greasy-fuchsia-owl
+      github.com/Deltares/ra2ce restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-magnolia-bracke.sh
+        container: qc.doc_whiny-grey-malamute
+  QC.Lic:
+    repos:
+      github.com/Deltares/ra2ce licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-cobalt-orangutan.sh
+        container: qc.lic_slimy-magnolia-blue
+  QC.Sec:
+    repos:
+      github.com/Deltares/ra2ce bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-cobalt-serval.sh
+        container: qc.sec_flaky-linen-axolotl
+  QC.Sty:
+    repos:
+      github.com/Deltares/ra2ce flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-harlequin-burmese.sh
+        container: qc.sty_cranky-cinnamon-greyhound
+      github.com/Deltares/ra2ce hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-khaki-coyote.sh
+        container: qc.sty_scummy-rose-capuchin
+      github.com/Deltares/ra2ce jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-celadon-terrier.sh
+        container: qc.sty_pretty-teal-bongo
+  QC.Uni:
+    repos:
+      github.com/Deltares/ra2ce pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-green-spoonbill.sh
+        container: qc.uni_homely-rose-mist
+  QC.Ver:
+    repos:
+      github.com/Deltares/ra2ce get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-persimmon-horse.sh
+        container: qc.ver_shabby-apricot-dachshund
+timeout: 5400
